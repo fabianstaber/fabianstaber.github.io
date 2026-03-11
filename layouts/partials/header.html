@@ -1,0 +1,52 @@
+<header class="header" id="header">
+    <div class="container header__inner">
+        <a href="{{ .Site.Home.RelPermalink }}" class="header__logo">
+            <img src="{{ .Site.Params.logo | relURL }}" alt="Speedcubing Austria Logo" width="50" height="50">
+            <!-- <span>Speedcubing Austria</span> -->
+        </a>
+
+        <nav class="nav" id="nav">
+            <ul class="nav__links">
+                {{ range .Site.Menus.main }}
+                <li><a href="{{ .URL }}" class="nav__link{{ if $.IsMenuCurrent " main" . }} nav__link--active{{ end
+                        }}">{{ .Name }}</a></li>
+                {{ end }}
+            </ul>
+
+            <div class="header__actions">
+                <div class="social-links">
+                    <a href="{{ .Site.Params.discord }}" class="social-link" aria-label="Discord" target="_blank"
+                        rel="noopener noreferrer">
+                        {{ partial "icons/discord.html" . }}
+                    </a>
+                    <a href="{{ .Site.Params.instagram }}" class="social-link" aria-label="Instagram" target="_blank"
+                        rel="noopener noreferrer">
+                        {{ partial "icons/instagram.html" . }}
+                    </a>
+                </div>
+
+                <div class="lang-switch">
+                    {{ if .IsTranslated }}
+                    {{ range .AllTranslations }}
+                    <a href="{{ .RelPermalink }}"
+                        class="lang-switch__link{{ if eq .Language.Lang $.Language.Lang }} lang-switch__link--active{{ end }}">{{
+                        .Language.LanguageName }}</a>
+                    {{ end }}
+                    {{ else }}
+                    {{ range .Site.Languages }}
+                    <a href="{{ .Lang | relLangURL }}"
+                        class="lang-switch__link{{ if eq .Lang $.Language.Lang }} lang-switch__link--active{{ end }}">{{
+                        .LanguageName }}</a>
+                    {{ end }}
+                    {{ end }}
+                </div>
+            </div>
+        </nav>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+        </button>
+    </div>
+</header>

@@ -1,0 +1,75 @@
+{{ define "main" }}
+<section class="hero">
+    <div class="container">
+        <header class="hero__content">
+            <p class="hero__subtitle">{{ .Params.hero_subtitle }}</p>
+            <h1 class="hero__title">{{ .Params.hero_title }}</h1>
+            <p class="hero__description">{{ .Params.hero_description }}</p>
+            <div class="hero__actions">
+                {{ $membershipPage := site.GetPage "/membership" }}
+                {{ with $membershipPage }}
+                <a href="{{ .RelPermalink }}" class="btn btn--primary btn--large">{{ $.Params.hero_btn_member }}</a>
+                {{ end }}
+                <a href="{{ .Site.Params.wcaURL }}" class="btn btn--white btn--large" target="_blank"
+                    rel="noopener noreferrer">{{ .Params.hero_btn_competitions }}</a>
+            </div>
+        </header>
+    </div>
+</section>
+
+<section class="section" id="what-is-speedcubing">
+    <div class="container">
+        <header class="section__header">
+            <h2 class="section__title">{{ .Params.section_what_is_title }}</h2>
+            <p class="section__description">{{ .Params.section_what_is_desc }}</p>
+        </header>
+
+        <div class="card-grid">
+            <article class="card">
+                <figure class="card__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M12 20v-6M6 20V10M18 20V4" />
+                    </svg>
+                </figure>
+                <h3 class="card__title">{{ .Params.card_1_title }}</h3>
+                <p class="card__text">{{ .Params.card_1_text }} <br><br>
+                    <a href='{{ .Params.card_1_link | relLangURL }}'>➔ {{ .Params.card_1_link_text }}</a>
+                </p>
+            </article>
+
+            <article class="card">
+                <figure class="card__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                </figure>
+                <h3 class="card__title">{{ .Params.card_2_title }}</h3>
+                <p class="card__text">{{ .Params.card_2_text }} <br><br>
+                    <a href='{{ .Params.card_2_link | relLangURL }}'>➔ {{ .Params.card_2_link_text }}</a>
+                </p>
+            </article>
+
+            <article class="card">
+                <figure class="card__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22 6 12 13 2 6" />
+                    </svg>
+                </figure>
+                <h3 class="card__title">{{ .Params.card_3_title }}</h3>
+                <p class="card__text">{{ .Params.card_3_text }} <br><br>
+                    <a href='{{ .Params.card_3_link | relLangURL }}'>➔ {{ .Params.card_3_link_text }}</a>
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+
+{{ end }}

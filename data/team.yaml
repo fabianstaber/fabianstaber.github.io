@@ -1,0 +1,20 @@
+- name: "Fabian Staber"
+  avatar: "FS"
+  email: "obmann@speedcubingaustria.at"
+  role:
+    de: "Obmann"
+    en: "Chairman"
+
+- name: "Pranjal Khan"
+  avatar: "PK"
+  email: "kassier@speedcubingaustria.at"
+  role:
+    de: "Kassier"
+    en: "Treasurer"
+
+- name: "Simon Praschl"
+  avatar: "SP"
+  email: "schriftfuehrer@speedcubingaustria.at"
+  role:
+    de: "Schriftführer"
+    en: "Secretary"

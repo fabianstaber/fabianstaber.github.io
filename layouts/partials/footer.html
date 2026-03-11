@@ -1,0 +1,10 @@
+<footer class="footer">
+    <div class="container">
+
+        <div class="footer__bottom">
+            <p><small>&copy; {{ now.Year }} {{ .Site.Title }}. {{ i18n "footer_copyright" }}</small></p>
+            <p><small><a href="{{ with .Site.GetPage `/impressum` }}{{ .RelPermalink }}{{ end }}"
+                        class="footer__bottom-link">{{ i18n "footer_impressum" }}</a></small></p>
+        </div>
+    </div>
+</footer>

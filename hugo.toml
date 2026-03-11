@@ -1,0 +1,76 @@
+baseURL = "https://speedcubing-austria.github.io/"
+title = "Speedcubing Austria"
+defaultContentLanguage = "de"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  logo = "/assets/images/logo_2_header.png"
+  email = "info@speedcubingaustria.at"
+  discord = "#"
+  instagram = "#"
+  wcaURL = "https://www.worldcubeassociation.org/competitions?region=AT"
+
+[languages]
+  [languages.de]
+    languageName = "DE"
+    weight = 1
+    [languages.de.params]
+      description = "Speedcubing Austria ist der offizielle Verein für Speedcubing in Österreich. Wir organisieren Wettbewerbe und fördern die Speedcubing-Community."
+
+    [[languages.de.menus.main]]
+      name = "Startseite"
+      pageRef = "/"
+      weight = 1
+    [[languages.de.menus.main]]
+      name = "Wettbewerbe"
+      pageRef = "/competitions"
+      weight = 2
+    [[languages.de.menus.main]]
+      name = "Mitgliedschaft"
+      pageRef = "/membership"
+      weight = 3
+    [[languages.de.menus.main]]
+      name = "Über uns"
+      pageRef = "/about"
+      weight = 4
+    [[languages.de.menus.main]]
+      name = "Kontakt"
+      pageRef = "/contact"
+      weight = 5
+
+  [languages.en]
+    languageName = "EN"
+    weight = 2
+    [languages.en.params]
+      description = "Speedcubing Austria is the official speedcubing association in Austria. We organize competitions and support the speedcubing community."
+
+    [[languages.en.menus.main]]
+      name = "Home"
+      pageRef = "/"
+      weight = 1
+    [[languages.en.menus.main]]
+      name = "Competitions"
+      pageRef = "/competitions"
+      weight = 2
+    [[languages.en.menus.main]]
+      name = "Membership"
+      pageRef = "/membership"
+      weight = 3
+    [[languages.en.menus.main]]
+      name = "About us"
+      pageRef = "/about"
+      weight = 4
+    [[languages.en.menus.main]]
+      name = "Contact"
+      pageRef = "/contact"
+      weight = 5
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+
+[outputs]
+  home = ["HTML"]
+
+[markup]
