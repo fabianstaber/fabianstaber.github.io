@@ -7,4 +7,5 @@
 <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
 {{ end }}
 <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
-<link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+{{ $mainCss := resources.Get "css/main.css" | minify }}
+<link rel="stylesheet" href="{{ $mainCss.RelPermalink }}">
