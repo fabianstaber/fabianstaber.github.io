@@ -7,5 +7,10 @@
 <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
 {{ end }}
 <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
-{{ $mainCss := resources.Get "css/main.css" | minify }}
-<link rel="stylesheet" href="{{ $mainCss.RelPermalink }}">
+{{ $css := slice
+(resources.Get "css/variables.css")
+(resources.Get "css/base.css")
+(resources.Get "css/layout.css")
+(resources.Get "css/components.css")
+| resources.Concat "css/main.min.css" | minify }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">

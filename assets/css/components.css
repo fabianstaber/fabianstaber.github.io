@@ -56,13 +56,13 @@
     position: relative;
     background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-accent-dark) 50%, var(--color-dark-soft) 100%);
     color: var(--color-white);
-    padding: var(--space-4xl) 0;
+    padding: var(--space-3xl) 0;
     overflow: hidden;
 }
 
 @media (max-width: 768px) {
     .hero {
-        padding: var(--space-3xl) 0;
+        padding: var(--space-2xl) 0;
     }
 }
 
@@ -127,7 +127,7 @@
 .hero__description {
     font-size: 1.15rem;
     color: rgba(255, 255, 255, 0.8);
-    margin-bottom: var(--space-2xl);
+    margin-bottom: 0;
     line-height: 1.7;
 }
 
@@ -208,8 +208,8 @@
     border-radius: var(--radius-lg);
     padding: var(--space-2xl);
     box-shadow: var(--shadow-sm);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all var(--transition-base);
+    border: 1.5px solid rgba(0, 0, 0, 0.05);
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
 }
 
 @media (max-width: 480px) {
@@ -219,8 +219,9 @@
 }
 
 .card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+    border-color: var(--color-primary);
 }
 
 .card__icon {
