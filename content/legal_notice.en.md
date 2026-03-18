@@ -2,11 +2,11 @@
 title: "Legal Notice"
 type: "page"
 url: "/en/legal-notice/"
-translationKey: "impressum"
+translationKey: "legal_notice"
 ---
 
-Speedcubing Austria\
-ZVR-Number: xxxxxxxxx\
-Musterstrasse 1\
+Speedcubing Austria - Verein für Zauberwürfelsport\
+ZVR-Number: 1146266369\
+Panoramagasse 84\
 A-8010 Graz\
 E-Mail: [obmann@speedcubingaustria.at](mailto:obmann@speedcubingaustria.at)
