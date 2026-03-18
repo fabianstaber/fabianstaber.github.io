@@ -11,6 +11,8 @@ hero_btn_competitions: "View Competitions"
 section_what_is_title: "What is Speedcubing?"
 section_what_is_desc: "Speedcubing is the sport of solving twisty puzzles like the Rubik's Cube as fast as possible. Thousands of athletes worldwide compete in official World Cube Association (WCA) competitions."
 
+section_comps_title: "Upcoming Competitions in Austria"
+
 card_1_title: "Competitions"
 card_1_text: "Find official WCA tournaments in Austria, learn what to expect, and find out how you can organize a competition yourself."
 card_1_link: "/competitions/"

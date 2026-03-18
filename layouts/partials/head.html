@@ -12,5 +12,7 @@
 (resources.Get "css/base.css")
 (resources.Get "css/layout.css")
 (resources.Get "css/components.css")
+(resources.Get "css/competitions.css")
 | resources.Concat "css/main.min.css" | minify }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+<link rel="stylesheet" href="https://cdn.cubing.net/v0/css/@cubing/icons/css">

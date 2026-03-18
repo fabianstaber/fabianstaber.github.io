@@ -1,0 +1,32 @@
+name: Fetch Austrian WCA Competitions
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  fetch-competitions:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Fetch competitions from WCA API
+        run: |
+          curl -s \
+            "https://www.worldcubeassociation.org/api/v0/competitions?country_iso2=AT&start=$(date +%Y-%m-%d)&per_page=6&sort=start_date" \
+            -H "Accept: application/json" \
+          | jq '[.[] | {name, url, city, event_ids, start_date, end_date}]' \
+          > data/competitions.json
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/competitions.json
+          git diff --cached --quiet || git commit -m "Update Austrian competition data"
+          git push

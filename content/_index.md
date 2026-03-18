@@ -11,6 +11,8 @@ hero_btn_competitions: "Wettbewerbe ansehen"
 section_what_is_title: "Was ist Speedcubing?"
 section_what_is_desc: "Im Speedcubing geht es darum, den 3x3x3 Zauberwürfel (auch Rubik's Cube genannt) und andere Puzzles so schnell wie möglich zu lösen. Bei offiziellen Wettbewerben der World Cube Association haben Speedcuber auf der ganzen Welt die Möglichkeit sich miteinander zu messen."
 
+section_comps_title: "Kommende Wettbewerbe in Österreich"
+
 card_1_title: "Wettbewerbe"
 card_1_text: "Finde offizielle WCA-Wettbewerbe in Österreich, lerne was dich dort erwartet und wie du selbst einen Wettbewerb organisieren kannst."
 card_1_link: "/competitions/"

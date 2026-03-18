@@ -19,7 +19,7 @@ Egal, wie alt du bist oder wie schnell du den Würfel löst, du bist willkommen.
 
 Bist du bereit für deine erste Competition? Hier findest du alle Wettbewerbe in Österreich:
 
-- [Zukünftige Wettbewerbe in Österreich](https://www.worldcubeassociation.org/competitions?region=AT)
+- [Kommende Wettbewerbe in Österreich](https://www.worldcubeassociation.org/competitions?region=AT)
 - [Vergangene Wettbewerbe in Österreich](https://www.worldcubeassociation.org/competitions?region=AT&state=past)
 
 Wir kündigen neue Wettbewerbe auch regelmäßig über unsere Kanäle an, halte also die Augen offen!

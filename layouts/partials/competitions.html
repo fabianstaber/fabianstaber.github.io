@@ -1,0 +1,49 @@
+{{ $competitions := site.Data.competitions }}
+
+{{ if $competitions }}
+<header class="section__header">
+  <h2 class="section__title">{{ .Params.section_comps_title }}</h2>
+</header>
+<div class="comp-grid">
+  {{ range $competitions }}
+  {{ $startDate := time .start_date }}
+  {{ $endDate := time .end_date }}
+  {{ $sameDay := eq .start_date .end_date }}
+
+  <a class="comp-card" href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ .name }}">
+
+    {{/* Date badge */}}
+    <div class="comp-card__date">
+      <span class="comp-card__month">{{ $startDate.Format "Jan" }}</span>
+      <span class="comp-card__day">{{ $startDate.Format "2" }}</span>
+      {{ if not $sameDay }}
+      <span class="comp-card__day-sep">-{{ $endDate.Format "2" }}</span>
+      {{ end }}
+    </div>
+
+    {{/* Body */}}
+    <div class="comp-card__body">
+      <h3 class="comp-card__name">{{ .name }}</h3>
+
+      <p class="comp-card__location">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+        {{ .city }}
+      </p>
+
+      {{ if .event_ids }}
+      <div class="comp-card__events" aria-label="Events">
+        {{ range .event_ids }}
+        <span class="cubing-icon event-{{ . }}" title="{{ . }}" aria-label="{{ . }}"></span>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+
+  </a>
+  {{ end }}
+</div>
+{{ end }}

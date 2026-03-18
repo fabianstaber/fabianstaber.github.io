@@ -19,6 +19,9 @@
 
 <section class="section" id="what-is-speedcubing">
     <div class="container">
+
+        {{ partial "competitions.html" . }}
+
         <header class="section__header">
             <h2 class="section__title">{{ .Params.section_what_is_title }}</h2>
             <p class="section__description">{{ .Params.section_what_is_desc }}</p>
