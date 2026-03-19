@@ -29,4 +29,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/competitions.json
           git diff --cached --quiet || git commit -m "Update Austrian competition data"
-          git push https://x-access-token:${{ secrets.PAT_TOKEN_BOT }}@github.com/${{ github.repository }}.git
+          git push
+
+      - name: Trigger deploy
+        run: gh workflow run "Deploy website" --ref main
