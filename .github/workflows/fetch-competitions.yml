@@ -30,8 +30,3 @@ jobs:
           git add data/competitions.json
           git diff --cached --quiet || git commit -m "Update Austrian competition data"
           git push
-
-      - name: Trigger deploy
-        run: gh workflow run "Deploy website" --ref main
-        env:
-          GH_TOKEN: ${{ github.token }}
